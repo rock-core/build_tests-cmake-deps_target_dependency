@@ -1,48 +1,15 @@
-deps_target_dependency
-=============
-Dependency for the build_tests/cmake/deps_target
+Part of the Rock integration tests
+
+This package is part of a set of three that tests
+[base/cmake](https://github.com/rock-core/base-cmake) `DEPS_TARGET`
+functionality.
+
+This package (`deps_target_dependency`) exports a CMake target. This exported
+target is then imported by
+[`deps_target`](https://github.com/rock-core/build_tests-cmake-deps_target)
+using the `DEPS_TARGET` flag from Rock's `base/cmake` macros.
+`deps_target_use_pkgconfig` then tries to use the result as a pkg-config
+dependency.
 
 
-
-License
--------
-dummy-license
-
-Installation
-------------
-The easiest way to build and install this package is to use Rock's build system.
-See [this page](http://rock-robotics.org/documentation/installation.html)
-on how to install Rock.
-
-However, if you feel that it's too heavy for your needs, Rock aims at having
-most of its "library" packages (such as this one) to follow best practices. See
-[this page](http://rock-robotics.org/documentation/packages/outside_of_rock.html)
-for installation instructions outside of Rock.
-
-Rock CMake Macros
------------------
-
-This package uses a set of CMake helper shipped as the Rock CMake macros.
-Documentations is available on [this page](http://rock-robotics.org/documentation/packages/cmake_macros.html).
-
-Rock Standard Layout
---------------------
-
-This directory structure follows some simple rules, to allow for generic build
-processes and simplify reuse of this project. Following these rules ensures that
-the Rock CMake macros automatically handle the project's build process and
-install setup properly.
-
-### Folder Structure
-
-| directory         |       purpose                                                        |
-| ----------------- | ------------------------------------------------------               |
-| src/              | Contains all header (*.h/*.hpp) and source files                     |
-| build/ *          | The target directory for the build process, temporary content        |
-| bindings/         | Language bindings for this package, e.g. put into subfolders such as |
-| ruby/             | Ruby language bindings                                               |
-| viz/              | Source files for a vizkit plugin / widget related to this library    |
-| resources/        | General resources such as images that are needed by the program      |
-| configuration/    | Configuration files for running the program                          |
-| external/         | When including software that needs a non standard installation process, or one that can be easily embedded include the external software directly here |
-| doc/              | should contain the existing doxygen file: doxygen.conf               |
+If it builds, it works

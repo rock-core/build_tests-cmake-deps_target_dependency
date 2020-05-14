@@ -1,5 +1,5 @@
-#ifndef _DUMMYPROJECT_DUMMY_HPP_
-#define _DUMMYPROJECT_DUMMY_HPP_
+#ifndef _DEPS_TARGET_DEPENDENCY_DUMMY_HPP_
+#define _DEPS_TARGET_DEPENDENCY_DUMMY_HPP_
 
 namespace deps_target_dependency
 {
@@ -12,7 +12,6 @@ namespace deps_target_dependency
              */
             void welcome();
     };
+}
 
-} // end namespace deps_target_dependency
-
-#endif // _DUMMYPROJECT_DUMMY_HPP_
+#endif
