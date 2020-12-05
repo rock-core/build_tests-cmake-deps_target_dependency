@@ -6,4 +6,5 @@
   <author>Sylvain Joyeux/sylvain.joyeux@tidewise.io</author>
   <license>Public Domain</license>
   <depend package="base/cmake" />
+  <depend package="build_tests/cmake/deps_target_transitive_dependency" />
 </package>
